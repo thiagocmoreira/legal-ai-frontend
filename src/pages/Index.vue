@@ -1,26 +1,27 @@
 <template lang="pug">
   q-page.index-container
-    div.content
-      div.logo-container
-        img(src="../assets/img/logo-unb.png").logo-unb
-      h1.title
-        q-icon(name="mdi-gavel", color="primary")
-        | Legal AI
-      p.coming Em Breve
+    menu-index
+    presentation
+    footer-page
 </template>
 
 <script>
+import MenuIndex from '../components/menu/Menu'
+import FooterPage from '../components/general/FooterPage'
+import Presentation from '../components/index/Presentation'
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  components: {
+    MenuIndex,
+    FooterPage,
+    Presentation
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
 .index-container
-  background url(http://minsk.bigdataweek.com/wp-content/uploads/sites/27/2017/08/AI_confer_8.jpg)
-  overflow hidden
-  background-size cover
-  background-position center
+  background $grey-2
   height 100vh
 .content
   width 100%

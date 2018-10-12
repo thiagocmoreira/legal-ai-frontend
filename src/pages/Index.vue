@@ -20,13 +20,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~variables'
 .index-container
-  background $grey-2
+  background $grey-4
   height 100vh
 .content
   width 100%
   height 100vh
-  background rgba(0, 0, 0, .4)
   position absolute
   top 0
   display flex

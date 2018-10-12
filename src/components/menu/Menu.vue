@@ -1,32 +1,34 @@
 <template lang="pug">
   div.navbar-container
     q-card.menu-container
-      div.first-section
-        a(@click="$router.push('/')", title="Legal Labs").logo LEGAL AI
-        q-input(
-          v-model="search",
-          type="search",
-          inverted,
-          placeholder="Pesquisar...",
-          color="grey-8",
-          :after="[{icon: 'mdi-magnify'}]"
-        ).search-input
-      div.menu-items
-        q-btn(
-          flat,
-          dense,
-          round,
-          icon="menu"
-          @click="showMenuMobile"
-          aria-label="Menu",
-          size="18px",
-          color="grey-7"
-        ).btn-mobile
-        nav
-          a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") Publicações
-          a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") Pessoas
-          a(href="#", v-scroll-to="{ el: '#content', offset: -110}") Projetos
-          a(href="#", v-scroll-to="'#professionals'") Contato
+      div.inner-menu
+        div.first-section
+          a(@click="$router.push('/')", title="Legal AI").logo
+            q-icon(name="mdi-gavel", size="23px")
+            | LEGAL AI
+          q-input(
+            v-model="search",
+            type="search",
+            inverted-light,
+            placeholder="Pesquisar...",
+            :after="[{icon: 'mdi-magnify', color: 'blue'}]"
+          ).search-input
+        div.menu-items
+          q-btn(
+            flat,
+            dense,
+            round,
+            icon="menu"
+            @click="showMenuMobile"
+            aria-label="Menu",
+            size="18px",
+            color="grey-7"
+          ).btn-mobile
+          nav
+            a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") Publicações
+            a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") Pessoas
+            a(href="#", v-scroll-to="{ el: '#content', offset: -110}") Projetos
+            a(href="#", v-scroll-to="'#professionals'") Contato
 </template>
 
 <script>
@@ -68,25 +70,30 @@ export default {
 .navbar-container
   width 100%
 .menu-container
-  background $grey-9
-  display flex
-  flex-direction row
-  justify-content space-between
-  padding 15px 30px
+  background $grey-1
+  padding 15px 20px
   position relative
   border-radius 0
   align-items center
   position fixed
   width 100%
+  z-index 10
+  top 0
   @media (max-width: 900px)
     padding 12px 7px 9px 17px !important
     width 100%
     margin 0 auto
   @media (max-width: 360px)
     padding 15px 3px 9px 14px
+  .inner-menu
+    max-width 1350px
+    margin 0 auto
+    display flex
+    flex-direction row
+    justify-content space-between
   .logo
     transition all 0.2s ease
-    color white
+    color $primary
     font-weight bold
     font-size 18px
     &:hover
@@ -96,6 +103,10 @@ export default {
       width 100%
       height auto
       user-select none
+    .q-icon
+      color $green-8
+      margin-top -7px
+      margin-right 5px
   .menu-items
     display flex
     flex-direction row
@@ -115,43 +126,26 @@ export default {
       padding 0 15px
       list-style-type none
       text-transform uppercase
-      color white
+      color $primary
       margin 0
       transition all 0.2s ease
       text-decoration none
       font-size 14px
-      font-weight 500
+      font-weight 600
       &:first-of-type
         padding-left 0
       &:last-of-type
         padding-right 0
       &:hover
         cursor pointer
-        color $primary
-.change-lang
-  max-width 26px
-  display inline-block
-  margin-left 15px
-  &.mobile-lang
-    margin-right 5px
-  img
-    margin-bottom -7px
-    width 100%
-    cursor pointer
-    transition all 0.2s ease
-    &:hover
-      transform scale(1.1)
-.mobile-lang
-  img
-    margin-bottom -4px
-.appear
-  .menu-items
-    nav
-      margin-top 0
+        color $green-8
 .search-input
   margin-left 20px
   max-height 30px
   border-radius 40px
+  box-shadow none
+  background rgba(0, 0, 0, 0.08) !important
+  color $grey-8 !important
 .first-section
   display flex
   flex-direction row

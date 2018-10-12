@@ -22,7 +22,7 @@ export default {
   background #252b2c
   height 200px
 .copy
-  background $blue-10
+  background $primary
   padding 20px
   display flex
   justify-content space-between

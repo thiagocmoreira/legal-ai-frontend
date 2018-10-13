@@ -62,6 +62,11 @@ export default {
   box-shadow none
   border-radius 0
   height 45px
-.publication-card-container:hover img
-  transform scale(1.05)
+  transition all 0.4s ease
+.publication-card-container:hover
+  img
+    transform scale(1.05)
+  .read-article
+    background white !important
+    color $primary !important
 </style>

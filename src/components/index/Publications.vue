@@ -52,7 +52,7 @@ export default {
   &:after
     content ''
     display block
-    width 212px
+    width 217px
     height 3px
     background linear-gradient(to right, $blue-8, $green-6)
     margin 0 auto

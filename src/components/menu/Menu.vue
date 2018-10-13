@@ -27,7 +27,7 @@
           nav
             a(href="#", v-scroll-to="{ el: '#about-us', offset: -40}") Sobre
             a(href="#", v-scroll-to="{ el: '#publications', offset: -75}") Publicações
-            a(href="#", v-scroll-to="{ el: '#content', offset: -110}") Projetos
+            a(href="#", v-scroll-to="{ el: '#projects', offset: -110}") Projetos
             a(href="#", v-scroll-to="{ el: '#schedule', offset: -90}") Pessoas
             a(href="#", v-scroll-to="'#professionals'") Contato
 </template>

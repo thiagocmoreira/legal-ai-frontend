@@ -25,6 +25,10 @@ export default {
   width 100%
   color $grey-9
   font-size 18px
+  @media (max-width: 1300px)
+    padding 0 25px
+  @media (max-width: 440px)
+    padding 0 15px
 .inner-content
   width 100%
   max-width 1233px
@@ -35,6 +39,8 @@ export default {
   background white
   padding 30px
   align-items center
+  @media (max-width: 440px)
+    padding 30px 15px
 .text
   flex 1
   margin-bottom 25px
@@ -57,8 +63,8 @@ export default {
   width 100%
   display flex
   justify-content space-between
+  flex-wrap wrap
 .project
-  width 370px
   height 350px
   overflow hidden
   display flex
@@ -67,6 +73,22 @@ export default {
   align-items center
   position relative
   transition all 0.4s ease
+  flex 1
+  margin 0 10px
+  @media (max-width: 1023px)
+    min-width 400px
+    margin-bottom 20px
+    min-height 350px
+  @media (max-width: 965px)
+    height 300px
+  @media (max-width: 560px)
+    min-width 300px
+  @media (max-width: 400px)
+    min-width 200px
+  @media (max-width: 370px)
+    height 400px
+  @media (max-width: 330px)
+    height 450px
   &:hover
     transform scale(1.03)
     .more
@@ -74,6 +96,8 @@ export default {
       color white
   img
     width 100%
+    @media (max-width: 370px)
+      transform scale(1.5)
 .inner-project
   position absolute
   top 0
@@ -98,6 +122,9 @@ export default {
     margin 0
     font-size 26px
     font-weight bold
+    @media (max-width: 370px)
+      line-height 28px
+      margin-bottom 5px
   p
     margin 0
     color white
@@ -113,4 +140,6 @@ export default {
   box-shadow none
   border-radius 0
   height 45px
+  @media (max-width: 965px)
+    margin-top 20px
 </style>

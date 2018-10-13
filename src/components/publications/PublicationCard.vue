@@ -31,6 +31,15 @@ export default {
   flex-direction column
   max-width 375px
   overflow hidden
+  flex 1
+  margin 0 10px
+  @media (max-width: 850px)
+    flex-direction row
+    margin-bottom 20px
+    max-width none
+    width 100%
+  @media (max-width: 730px)
+    flex-direction column
   &:hover
     img
       transform scale(1.05)
@@ -38,17 +47,23 @@ export default {
       background white !important
       color $primary !important
   .publication-img
-    width 100%
-    height 250px
+    height 100%
+    width auto
     display flex
     flex-direction column
     align-items center
     justify-content center
     overflow hidden
+    @media (max-width: 850px)
+      min-width 200px
     img
-      width 100%
+      width 110%
       display block
       transition all 0.2s ease
+      @media (max-width: 850px)
+        height 100%
+        width auto
+        max-height 400px
   .publication-infos
     width 100%
     background $green-8
@@ -63,10 +78,18 @@ export default {
     p
       margin 0
       color white
+      @media (max-width: 935px)
+        display none
+      @media (max-width: 850px)
+        display block
 .read-article
   margin-top 30px
   box-shadow none
   border-radius 0
   height 45px
   transition all 0.4s ease
+  @media (max-width: 935px)
+    margin-top 10px
+  @media (max-width: 730px)
+    margin-top 30px
 </style>

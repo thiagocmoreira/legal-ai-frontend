@@ -24,8 +24,13 @@ export default {
   align-items center
   max-width 1233px
   margin 0 auto
+  @media (max-width: 440px)
+    flex-direction column
+    padding 20px
   .direito-logo
     width 120px
+    @media (max-width: 440px)
+      margin-bottom 10px
     img
       width 100%
       filter brightness(0) invert(1)

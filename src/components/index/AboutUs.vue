@@ -27,6 +27,11 @@ export default {
   width 100%
   color $grey-9
   font-size 18px
+  position relative
+  @media (max-width: 1300px)
+    padding 0 25px
+  @media (max-width: 440px)
+    padding 0 15px
 .inner-content
   width 100%
   max-width 1233px
@@ -36,6 +41,10 @@ export default {
   flex-direction column
   background white
   padding 30px
+  justify-content center
+  @media (max-width: 440px)
+    padding 30px 25px
+    text-align justify
 .text
   flex 1
   margin-bottom 25px
@@ -47,6 +56,8 @@ export default {
     position relative
     margin-bottom 25px
     text-align center
+    @media (max-width: 380px)
+      font-size 26px
     &:after
       content ''
       display block
@@ -54,21 +65,34 @@ export default {
       height 3px
       background linear-gradient(to right, $blue-8, $green-6)
       margin 0 auto
+      @media (max-width: 380px)
+        width 235px
   p
     margin 0
 .list
   display flex
+  @media (max-width: 1010px)
+    flex-direction column
+    align-items center
   .list-items
     flex 1
     ul
       margin 0
       padding-left 30px
+      @media (max-width: 440px)
+        padding-left 20px
     li
       margin-bottom 10px
   .img
     width 300px
     margin-left 30px
+    @media (max-width: 1010px)
+      margin-left 0
+    @media (max-width: 390px)
+      width 260px
     img
       width 100%
       margin-top -20px
+      @media (max-width: 1010px)
+        margin-top 20px
 </style>

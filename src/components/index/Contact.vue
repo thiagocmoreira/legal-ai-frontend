@@ -3,14 +3,14 @@
     div.inner-content
       div.social-media
         h1.logo
-          q-icon(name="mdi-gavel", size="70px")
+          q-icon(name="mdi-gavel")
           | LEGAL AI
         p.slogan Direito e Inteligência Artificial em um só lugar
         div.social-media-btns
-          q-btn(flat, round, icon="mdi-facebook", color="grey-7", size="30px")
-          q-btn(flat, round, icon="mdi-linkedin", color="grey-7", size="30px")
-          q-btn(flat, round, icon="mdi-twitter", color="grey-7", size="30px")
-          q-btn(flat, round, icon="mdi-youtube", color="grey-7", size="30px")
+          q-btn(flat, round, icon="mdi-facebook", color="grey-7")
+          q-btn(flat, round, icon="mdi-linkedin", color="grey-7")
+          q-btn(flat, round, icon="mdi-twitter", color="grey-7")
+          q-btn(flat, round, icon="mdi-youtube", color="grey-7")
       div.contact
         form(action="https://formspree.io/contato@legalabs.com.br", method="POST", target="_blank").fields
           q-input(color="grey-7", placeholder="Nome", :value="name", name="Nome", required, inverted)
@@ -40,6 +40,8 @@ export default {
   width 100%
   font-size 18px
   background #252b2c
+  @media (max-width: 1300px)
+    padding 0 25px
 .inner-content
   width 100%
   max-width 1233px
@@ -49,6 +51,9 @@ export default {
   flex-direction row
   align-items center
   padding 30px 0
+  @media (max-width: 770px)
+    flex-direction column
+    padding 45px 0
 .social-media
   flex 1
   display flex
@@ -60,23 +65,39 @@ export default {
   font-size 60px
   color $grey-7
   font-weight bold
+  @media (max-width: 940px)
+    font-size 45px
   .q-icon
     margin-top -22px
     margin-right 10px
+    font-size 70px
+    @media (max-width: 940px)
+      font-size 55px
 .slogan
   margin 0
   font-size 16px
   color $grey-7
   margin-top 12px
   font-style italic
+  @media (max-width: 940px)
+    width 70%
+    text-align center
 .social-media-btns
   margin-top 10px
   .q-btn
     border-radius 0
     width 60px
     height 60px
+    font-size 30px
+    @media (max-width: 380px)
+      font-size 22px
+      width 45px
+      height 45px
 .contact
   width 60%
+  @media (max-width: 770px)
+    width 100%
+    margin-top 30px
 .fields
   flex 1
   display flex
@@ -91,9 +112,6 @@ export default {
     font-size 14px
     padding 5px 15px
     color $green
-  .q-option-group
-    color white
-    font-size 14px
   .options
     display flex
     padding-bottom 10px

@@ -61,6 +61,10 @@ export default {
   width 100%
   color $grey-9
   font-size 18px
+  @media (max-width: 1300px)
+    padding 0 25px
+  @media (max-width: 440px)
+    padding 0 15px
 .inner-content
   width 100%
   max-width 1233px
@@ -71,6 +75,8 @@ export default {
   background white
   padding 30px
   align-items center
+  @media (max-width: 440px)
+    padding 30px 15px
 .text
   flex 1
   margin-bottom 25px

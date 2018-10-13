@@ -147,6 +147,8 @@ export default {
   box-shadow none
   background rgba(0, 0, 0, 0.08) !important
   color $grey-8 !important
+  @media (max-width: 570px)
+    display none
 .first-section
   display flex
   flex-direction row

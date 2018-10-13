@@ -41,7 +41,7 @@ export default {
   justify-content center
   img
     transition all 0.2s ease
-    height 102%
+    height 105%
 .description
   flex 1
   background $green-8

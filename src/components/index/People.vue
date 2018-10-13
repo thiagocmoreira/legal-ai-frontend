@@ -99,6 +99,7 @@ export default {
   margin-top 20px
   box-shadow none
   border-radius 0
+  height 45px
 .person
   margin-bottom 20px
 </style>

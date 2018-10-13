@@ -6,6 +6,7 @@
     publications
     projects
     people
+    contact
     footer-page
 </template>
 
@@ -16,6 +17,7 @@ import AboutUs from '../components/index/AboutUs'
 import Publications from '../components/index/Publications'
 import Projects from '../components/index/Projects'
 import People from '../components/index/People'
+import Contact from '../components/index/Contact'
 import FooterPage from '../components/general/FooterPage'
 export default {
   name: 'PageIndex',
@@ -26,6 +28,7 @@ export default {
     Publications,
     Projects,
     People,
+    Contact,
     FooterPage
   }
 }

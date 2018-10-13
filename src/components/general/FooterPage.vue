@@ -16,8 +16,6 @@ export default {
 @import '~variables'
 .footer-page
   width 100%
-  position absolute
-  bottom 0
 .footer-infos
   background #252b2c
   height 200px

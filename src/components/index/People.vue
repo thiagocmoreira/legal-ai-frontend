@@ -3,19 +3,55 @@
     div.inner-content
       h3.title Pessoas
       div.people
-        div(v-for="p in 2", :key="p").person
-          div.img
-            img(src="https://aicamp.com.br/img/Foto_Ricardo_Fernandes.dcf8813.jpg")
-          div.description
-            h4 Professor Ricardo Fernandes
-            p Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs.
-            q-btn.view-profile Ver Perfil
+        person-card(
+          v-for="p in people",
+          :key="p.id",
+          :person="p"
+        ).person
       q-btn(color="primary").read-more Ver mais pessoas
 </template>
 
 <script>
+import PersonCard from '../people/PersonCard'
 export default {
-  name: 'people'
+  name: 'people',
+  components: {
+    PersonCard
+  },
+  data () {
+    return {
+      people: [
+        {
+          id: 1,
+          role: 'teacher',
+          name: 'Professor Ricardo Fernandes',
+          photo: 'https://aicamp.com.br/img/Foto_Ricardo_Fernandes.dcf8813.jpg',
+          resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs'
+        },
+        {
+          id: 2,
+          role: 'studant',
+          name: 'Thiago Moreira',
+          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
+          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+        },
+        {
+          id: 3,
+          role: 'studant',
+          name: 'Danilo Barros',
+          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
+          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+        },
+        {
+          id: 4,
+          role: 'studant',
+          name: 'Gustavo Carvalho',
+          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
+          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -58,52 +94,11 @@ export default {
   display flex
   justify-content space-between
   flex-direction row
-.person
-  width 570px
-  display flex
-  &:hover
-    .view-profile
-      background white !important
-      color $primary !important
-    img
-      transform scale(1.05)
-  .img
-    width 230px
-    height 300px
-    overflow hidden
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-    img
-      transition all 0.2s ease
-      width 100%
-  .description
-    flex 1
-    background $green-8
-    display flex
-    flex-direction column
-    padding 30px
-    h4
-      margin 0
-      font-size 22px
-      line-height 26px
-      color white
-      font-weight bold
-      margin-bottom 15px
-    p
-      color white
-      margin 0
-    .view-profile
-      margin-top 20px
-      background $primary
-      box-shadow none
-      border-radius 0
-      color white
-      max-width 150px
+  flex-wrap wrap
 .read-more
-  margin-top 40px
+  margin-top 20px
   box-shadow none
   border-radius 0
-  height 45px
+.person
+  margin-bottom 20px
 </style>

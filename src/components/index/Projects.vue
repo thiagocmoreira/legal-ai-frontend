@@ -3,11 +3,11 @@
     div.inner-content
       h3.title Projetos
       div.projects
-        div(v-for="p in 3", :key="3").project
+        div(v-for="p in 3", :key="p").project
           img(src="https://images.unsplash.com/photo-1528217580778-96e570819666?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19a3a4640d3a734c3da937653a66c809&auto=format&fit=crop&w=500&q=60")
           div.inner-project
             div.content
-              h3 Victor
+              h3 Projeto VICTOR
               p O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.
               q-btn.more Saiba mais
       q-btn(color="primary").read-more Ver mais projetos

@@ -17,7 +17,7 @@
 
 <script>
 export default {
-
+  name: 'AboutUs'
 }
 </script>
 
@@ -45,7 +45,7 @@ export default {
     text-transform uppercase
     font-weight bold
     position relative
-    margin-bottom 20px
+    margin-bottom 25px
     text-align center
     &:after
       content ''
@@ -62,7 +62,7 @@ export default {
     flex 1
     ul
       margin 0
-      padding-left 20px
+      padding-left 30px
     li
       margin-bottom 10px
   .img

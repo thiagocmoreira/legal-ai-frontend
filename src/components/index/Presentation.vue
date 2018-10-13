@@ -2,7 +2,7 @@
   div.presentation-container
     div.content
       div.left
-        h1.logo
+        h1.logo.animate-pop
           q-icon(name="mdi-gavel", size="90px")
           | LEGAL AI
         p.slogan Direito e Tecnologia em um só lugar

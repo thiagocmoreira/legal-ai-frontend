@@ -3,6 +3,7 @@
     menu-index
     presentation
     about-us
+    publications
     footer-page
 </template>
 
@@ -10,6 +11,7 @@
 import MenuIndex from '../components/menu/Menu'
 import Presentation from '../components/index/Presentation'
 import AboutUs from '../components/index/AboutUs'
+import Publications from '../components/index/Publications'
 import FooterPage from '../components/general/FooterPage'
 export default {
   name: 'PageIndex',
@@ -17,6 +19,7 @@ export default {
     MenuIndex,
     Presentation,
     AboutUs,
+    Publications,
     FooterPage
   }
 }

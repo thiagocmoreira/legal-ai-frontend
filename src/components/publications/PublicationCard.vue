@@ -31,6 +31,12 @@ export default {
   flex-direction column
   max-width 375px
   overflow hidden
+  &:hover
+    img
+      transform scale(1.05)
+    .read-article
+      background white !important
+      color $primary !important
   .publication-img
     width 100%
     height 250px
@@ -63,10 +69,4 @@ export default {
   border-radius 0
   height 45px
   transition all 0.4s ease
-.publication-card-container:hover
-  img
-    transform scale(1.05)
-  .read-article
-    background white !important
-    color $primary !important
 </style>

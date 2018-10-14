@@ -8,13 +8,13 @@
           :key="p.id",
           :person="p"
         ).person
-      q-btn(color="primary").read-more Ver mais pessoas
+      q-btn(color="primary", @click="$router.push('people')").read-more Ver mais pessoas
 </template>
 
 <script>
 import PersonCard from '../people/PersonCard'
 export default {
-  name: 'people',
+  name: 'People',
   components: {
     PersonCard
   },

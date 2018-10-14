@@ -2,18 +2,22 @@
   q-page.publications-container
     menu-index
     div.parallax
-      q-parallax(src="https://images.pexels.com/photos/207662/pexels-photo-207662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", :height="200").par
-      div.parallax-content
-        div.content
-          h1.logo.animate-pop
-            q-icon(name="mdi-gavel")
-            | LEGAL AI
-          h2.page-title Publicações
+      div.img
+        img(:src="bg")
+        div.parallax-content
+          div.content
+            h1.logo.animate-pop
+              q-icon(name="mdi-gavel")
+              | LEGAL AI
+            h2.page-title Publicações
     div.publications
-      publication-card(
-        title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
-        resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
-      )
+      div.inner-publications
+        publication-card(
+          v-for="p in 9",
+          :key="p",
+          title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
+          resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
+        )
     footer-page.foorer-page
 </template>
 
@@ -27,6 +31,11 @@ export default {
     MenuIndex,
     FooterPage,
     'publication-card': PublicationCard
+  },
+  computed: {
+    bg () {
+      return require('../assets/img/bg.jpg')
+    }
   }
 }
 </script>
@@ -37,18 +46,28 @@ export default {
   display flex
   flex-direction column
   background $grey-3
-.parallax
+.img
   margin-top 60px
   position relative
-// .par
-//   filter grayscale(100%)
+  width 100%
+  height 200px
+  overflow hidden
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  @media (max-width: 670px)
+    height 160px
+  img
+    width 100%
 .parallax-content
   position absolute
   top 0
   width 100%
   height 100%
   // background rgba(35, 35, 35, 0.8)
-  background-image linear-gradient(to right, $primary, rgba(34, 33, 126, 0.92), transparent)
+  background linear-gradient(to right, $primary, rgba(34, 33, 126, 0.97), transparent)
+  // background linear-gradient(to right, $primary, transparent)
   display flex
   flex-direction column
 .content
@@ -62,33 +81,58 @@ export default {
   height 100%
   @media (max-width: 1300px)
     padding 0 25px
+  @media (max-width: 670px)
+    justify-content center
+  @media (max-width: 460px)
+    flex-direction column
 .logo
   margin 0
-  font-size 70px
+  font-size 60px
   color white
   font-weight bold
   @media (max-width: 1160px)
-    font-size 70px
+    font-size 50px
   @media (max-width: 670px)
-    font-size 45px
+    font-size 35px
   .q-icon
     margin-top -22px
     margin-right 10px
-    font-size 80px
+    font-size 70px
     @media (max-width: 1160px)
-      font-size 80px
+      font-size 60px
     @media (max-width: 670px)
-      font-size 55px
+      font-size 45px
 .page-title
   color white
   margin 0
   font-size 50px
   line-height 56px
   margin-left 25px
+  @media (max-width: 1160px)
+    font-size 38px
+    margin-left 20px
+  @media (max-width: 670px)
+    font-size 32px
+    line-height 36px
+    margin-top 3px
+    margin-left 15px
+  @media (max-width: 460px)
+    margin-left 0
 .publications
+  @media (max-width: 1300px)
+    padding 0 25px
+  @media (max-width: 440px)
+    padding 0 15px
+.inner-publications
   background white
   width 100%
   max-width 1233px
   margin 40px auto
-  padding 35px 30px
+  padding 25px 20px
+  display flex
+  flex-wrap wrap
+  position relative
+  justify-content center
+  @media (max-width: 440px)
+    padding 25px 10px
 </style>

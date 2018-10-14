@@ -33,13 +33,24 @@ export default {
   overflow hidden
   flex 1
   margin 0 10px
-  @media (max-width: 850px)
-    flex-direction row
-    margin-bottom 20px
-    max-width none
-    width 100%
-  @media (max-width: 730px)
-    flex-direction column
+  min-width 300px
+  margin-bottom 20px
+  @media (max-width: 1070px)
+    min-width 270px
+  @media (max-width: 975px)
+    min-width 250px
+  @media (max-width: 650px)
+    min-width 500px
+  @media (max-width: 610px)
+    min-width 400px
+  @media (max-width: 520px)
+    min-width 360px
+  @media (max-width: 460px)
+    min-width 330px
+  @media (max-width: 440px)
+    min-width 280px
+  @media (max-width: 380px)
+    min-width 250px
   &:hover
     img
       transform scale(1.05)

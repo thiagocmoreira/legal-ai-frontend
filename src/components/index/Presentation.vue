@@ -94,7 +94,7 @@ export default {
   &:after
     position absolute
     top 0
-    right -60px
+    right -59px
     display block
     content ''
     width 0

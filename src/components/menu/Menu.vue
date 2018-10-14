@@ -29,7 +29,7 @@
             a(href="#", v-scroll-to="{ el: '#publications', offset: -75}") Publicações
             a(href="#", v-scroll-to="{ el: '#projects', offset: -80}") Projetos
             a(href="#", v-scroll-to="{ el: '#people', offset: -90}") Pessoas
-            a(href="#", v-scroll-to="'#professionals'") Contato
+            a(href="#", v-scroll-to="'#contact'") Contato
 </template>
 
 <script>

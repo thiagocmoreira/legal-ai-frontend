@@ -8,8 +8,8 @@
           :key="p",
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
-        )
-      q-btn(color="primary").read-more Ver mais publicações
+        ).publication-card
+      q-btn(color="primary", @click="$router.push('publications')").read-more Ver mais publicações
 </template>
 
 <script>
@@ -76,4 +76,28 @@ export default {
   border-radius 0
   height 45px
   max-width 400px
+.publication-card
+  @media (max-width: 850px)
+    min-width 600px
+  @media (max-width: 720px)
+    min-width 500px
+  @media (max-width: 615px)
+    min-width 460px
+  @media (max-width: 570px)
+    min-width 430px
+  @media (max-width: 535px)
+    min-width 400px
+  @media (max-width: 500px)
+    min-width 350px
+  @media (max-width: 475px)
+    max-width 350px
+  @media (max-width: 460px)
+    max-width 320px
+  @media (max-width: 430px)
+    width 200px
+    min-width 300px
+  @media (max-width: 380px)
+    min-width 280px
+  @media (max-width: 350px)
+    min-width 230px
 </style>

@@ -5,8 +5,8 @@
       div.img
         img(:src="bg")
         div.parallax-content
-          div.content
-            h1.logo.animate-pop
+          div.content.animate-fade
+            h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
             h2.page-title Publicações

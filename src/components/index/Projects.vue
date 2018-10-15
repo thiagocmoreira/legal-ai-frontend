@@ -3,19 +3,28 @@
     div.inner-content
       h3.title Projetos
       div.projects
-        div(v-for="p in 3", :key="p").project
-          img(src="https://images.unsplash.com/photo-1528217580778-96e570819666?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19a3a4640d3a734c3da937653a66c809&auto=format&fit=crop&w=500&q=60")
-          div.inner-project
-            div.content
-              h3 Projeto VICTOR
-              p O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.
-              q-btn.more Saiba mais
-      q-btn(color="primary").read-more Ver mais projetos
+        project-card(v-for="p in projects", :key="p.id", :project="p")
+      q-btn(color="primary", @click="$router.push('projects')").read-more Ver mais projetos
 </template>
 
 <script>
+import ProjectCard from '../projects/ProjectCard'
 export default {
-  name: 'Projects'
+  name: 'Projects',
+  components: {
+    ProjectCard
+  },
+  data () {
+    return {
+      projects: [
+        {
+          id: 1,
+          name: 'Projeto VICTOR',
+          resume: 'O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -64,77 +73,6 @@ export default {
   display flex
   justify-content space-between
   flex-wrap wrap
-.project
-  height 350px
-  overflow hidden
-  display flex
-  flex-direction column
-  justify-content center
-  align-items center
-  position relative
-  transition all 0.4s ease
-  flex 1
-  margin 0 10px
-  @media (max-width: 1023px)
-    min-width 400px
-    margin-bottom 20px
-    min-height 350px
-  @media (max-width: 965px)
-    height 300px
-  @media (max-width: 560px)
-    min-width 300px
-  @media (max-width: 400px)
-    min-width 200px
-  @media (max-width: 370px)
-    height 400px
-  @media (max-width: 330px)
-    height 450px
-  &:hover
-    transform scale(1.03)
-    .more
-      background $green-8
-      color white
-  img
-    width 100%
-    @media (max-width: 370px)
-      transform scale(1.5)
-.inner-project
-  position absolute
-  top 0
-  width 100%
-  height 100%
-  display flex
-  flex-direction column
-  justify-content center
-  align-items center
-  background rgba(70, 70, 70, 0.65)
-.content
-  width 90%
-  height 90%
-  border solid 2px white
-  padding 20px
-  display flex
-  display flex
-  flex-direction column
-  justify-content center
-  h3
-    color white
-    margin 0
-    font-size 26px
-    font-weight bold
-    @media (max-width: 370px)
-      line-height 28px
-      margin-bottom 5px
-  p
-    margin 0
-    color white
-  .more
-    margin-top 20px
-    box-shadow none
-    border-radius 0
-    background white
-    color $grey-9
-    max-width 115px
 .read-more
   margin-top 40px
   box-shadow none

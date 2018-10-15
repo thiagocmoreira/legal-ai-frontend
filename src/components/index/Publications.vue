@@ -3,9 +3,7 @@
     div.inner-content
       h3.title Publicações
       div.publications
-        publication-card(,
-          v-for="p in 3",
-          :key="p",
+        publication-card(
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
         ).publication-card

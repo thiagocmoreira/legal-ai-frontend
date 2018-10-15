@@ -13,7 +13,7 @@
             placeholder="Pesquisar...",
             :after="[{icon: 'mdi-magnify', color: 'blue'}]"
           ).search-input
-        div.menu-items
+        div(v-if="onIndex").menu-items
           q-btn(
             flat,
             dense,
@@ -44,16 +44,18 @@ export default {
       search: ''
     }
   },
-  props: {
-    logoWidth: {
-      type: String,
-      default: '130px'
-    }
-  },
   methods: {
     showMenuMobile () {
       this.menuMobileVisibility = !this.menuMobileVisibility
     }
+  },
+  computed: {
+    onIndex () {
+      return this.$route.path === '/'
+    }
+  },
+  mounted () {
+    console.log(this.$route)
   }
 }
 </script>

@@ -21,6 +21,9 @@ import ContactSection from '../components/index/Contact'
 import FooterPage from '../components/general/FooterPage'
 export default {
   name: 'PageIndex',
+  metaInfo: {
+    title: 'Legal AI - Direito e Inteligência Artificial em um só lugar'
+  },
   components: {
     MenuIndex,
     PresentationSection,

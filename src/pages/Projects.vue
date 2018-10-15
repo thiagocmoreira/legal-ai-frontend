@@ -26,6 +26,9 @@ export default {
     ProjectCard,
     FooterPage
   },
+  metaInfo: {
+    title: 'Projetos - Legal AI'
+  },
   data () {
     return {
       projects: [

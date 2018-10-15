@@ -13,8 +13,6 @@
     div.publications
       div.inner-publications
         publication-card(
-          v-for="p in 9",
-          :key="p",
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
         )
@@ -31,6 +29,9 @@ export default {
     MenuIndex,
     FooterPage,
     'publication-card': PublicationCard
+  },
+  metaInfo: {
+    title: 'Publicações - Legal AI'
   },
   computed: {
     bg () {
@@ -132,7 +133,6 @@ export default {
   display flex
   flex-wrap wrap
   position relative
-  justify-content center
   @media (max-width: 440px)
     padding 25px 10px
 </style>

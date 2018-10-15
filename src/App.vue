@@ -7,10 +7,16 @@
 <script>
 import Vue from 'vue'
 import VueScrollTo from 'vue-scrollto'
+import Meta from 'vue-meta'
+
 Vue.use(VueScrollTo, {offset: -30})
+Vue.use(Meta)
 
 export default {
-  name: 'App'
+  name: 'App',
+  metaInfo: {
+    title: 'Legal AI | Direito e Inteligência Artificial em um só lugar'
+  }
 }
 </script>
 

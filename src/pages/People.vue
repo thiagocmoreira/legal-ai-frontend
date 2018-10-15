@@ -27,6 +27,9 @@ export default {
     FooterPage,
     PersonCard
   },
+  metaInfo: {
+    title: 'Pessoas - Legal AI'
+  },
   data () {
     return {
       people: [

@@ -17,6 +17,7 @@ export default {
 .footer-page
   width 100%
   background $primary
+  margin auto auto 0 auto
 .copy
   padding 15px 20px
   display flex

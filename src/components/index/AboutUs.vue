@@ -1,5 +1,6 @@
 <template lang="pug">
   nav.about-us-container#about-us
+    q-scroll-observable(@scroll="userHasScrolled")
     div.inner-content
       div.text
         h3.title Sobre o Legal AI
@@ -11,13 +12,58 @@
             li O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
             li É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica.
             li Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
-        div.img
-          img(src="https://images.unsplash.com/photo-1532007195987-bb4ddeaf052d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca2b6bbfcd5a9d427f68cbd479780f30&auto=format&fit=crop&w=1267&q=80")
+            li Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
+            li O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
+        div.img-animation
+          img(src="../../assets/img/hand.png").hand
+          img(v-if="show[0]", src="../../assets/img/light.png").light.animate-scale
+          img(v-if="show[1]", src="../../assets/img/balance1.png").balance.animate-scale
+          img(v-if="show[2]", src="../../assets/img/binary.png").binary-5.animate-pop
+          img(v-if="show[3]", src="../../assets/img/binary.png").binary-3.animate-pop
+          img(v-if="show[4]", src="../../assets/img/binary.png").binary-4.animate-pop
+          img(v-if="show[5]", src="../../assets/img/binary.png").binary.animate-pop
+          img(v-if="show[6]", src="../../assets/img/binary.png").binary-1.animate-pop
+          img(v-if="show[7]", src="../../assets/img/binary.png").binary-2.animate-pop
+          img(v-if="show[8]", src="../../assets/img/binary.png").binary-6.animate-pop
+          img(v-if="show[9]", src="../../assets/img/binary.png").binary-7.animate-pop
+          img(v-if="show[10]", src="../../assets/img/binary.png").binary-8.animate-pop
+          p.bug {{ size }} {{ show }}
 </template>
 
 <script>
 export default {
-  name: 'AboutUs'
+  name: 'AboutUs',
+  data () {
+    return {
+      size: 0,
+      show: [false, false, false, false, false, false, false, false, false, false, false],
+      wasActivated: false,
+      isMobile: false
+    }
+  },
+  methods: {
+    setAnimation () {
+      let interval = setInterval(() => {
+        this.show[this.size] = true
+        this.size++
+        if (this.size === this.show.length) {
+          clearInterval(interval)
+        }
+      }, 300)
+    },
+    userHasScrolled (scroll) {
+      if (!this.isMobile && !this.wasActivated && scroll.position >= 170) {
+        this.wasActivated = true
+        this.setAnimation()
+      } else if (this.isMobile && !this.wasActivated && scroll.position >= 950) {
+        this.wasActivated = true
+        this.setAnimation()
+      }
+    }
+  },
+  mounted () {
+    this.isMobile = this.$q.platform.is.mobile
+  }
 }
 </script>
 
@@ -83,16 +129,115 @@ export default {
         padding-left 20px
     li
       margin-bottom 10px
-  .img
-    width 300px
-    margin-left 30px
+  .img-animation
+    width 285px
+    height 290px
+    margin-left 15px
+    position relative
     @media (max-width: 1010px)
       margin-left 0
+      height 330px
     @media (max-width: 390px)
-      width 260px
+      transform scale(0.9)
+    @media (max-width: 360px)
+      transform scale(0.8)
+    @media (max-width: 330px)
+      transform scale(0.7)
     img
       width 100%
       margin-top -20px
       @media (max-width: 1010px)
         margin-top 20px
+  .hand
+    position absolute
+    bottom 0
+    right 0
+    max-width 280px
+  .light
+    position absolute
+    bottom 0
+    right 0
+    margin-bottom 55px
+    margin-right 87px
+    max-width 180px
+  .balance
+    position absolute
+    top 0
+    right 0
+    margin-right 72px
+    max-width 210px
+  .binary-5
+    position absolute
+    bottom 0
+    left 0
+    margin-left 50px
+    max-width 25px
+    margin-bottom 110px
+  .binary-3
+    position absolute
+    bottom 0
+    left 0
+    margin-left 121px
+    max-width 20px
+    margin-bottom 117px
+  .binary-4
+    position absolute
+    bottom 0
+    left 0
+    margin-left 154px
+    max-width 15px
+    margin-bottom 125px
+  .binary
+    position absolute
+    bottom 0
+    left 0
+    margin-left 124px
+    max-width 25px
+    margin-bottom 130px
+  .binary-1
+    position absolute
+    bottom 0
+    left 0
+    margin-left 84px
+    max-width 25px
+    margin-bottom 123px
+  .binary-1
+    position absolute
+    bottom 0
+    left 0
+    margin-left 84px
+    max-width 25px
+    margin-bottom 123px
+  .binary-2
+    position absolute
+    bottom 0
+    left 0
+    margin-left 80px
+    max-width 20px
+    margin-bottom 98px
+  .binary-6
+    position absolute
+    bottom 0
+    left 0
+    margin-left 95px
+    max-width 20px
+    margin-bottom 108px
+  .binary-7
+    position absolute
+    bottom 0
+    left 0
+    margin-left 115px
+    max-width 20px
+    margin-bottom 90px
+  .binary-8
+    position absolute
+    bottom 0
+    left 0
+    margin-left 55px
+    max-width 20px
+    margin-bottom 128px
+.bug
+  font-size 0px
+  margin 0
+  display hidden
 </style>

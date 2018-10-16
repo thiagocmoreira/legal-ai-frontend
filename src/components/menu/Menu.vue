@@ -53,9 +53,6 @@ export default {
     onIndex () {
       return this.$route.path === '/'
     }
-  },
-  mounted () {
-    console.log(this.$route)
   }
 }
 </script>

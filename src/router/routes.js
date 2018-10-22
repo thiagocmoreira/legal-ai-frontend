@@ -8,10 +8,10 @@ const routes = [
     ]
   },
   {
-    path: '/publications',
+    path: '/posts',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Publications.vue') }
+      { path: '', component: () => import('pages/Posts.vue') }
     ]
   },
   {
@@ -26,6 +26,14 @@ const routes = [
     component: () => import('layouts/MyLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Projects.vue') }
+    ]
+  },
+  {
+    path: '/post/:postId',
+    component: () => import('layouts/MyLayout.vue'),
+    props: true,
+    children: [
+      { path: '', component: () => import('pages/Post.vue') }
     ]
   }
 ]

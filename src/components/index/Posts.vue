@@ -3,19 +3,19 @@
     div.inner-content
       h3.title Publicações
       div.publications
-        publication-card(
+        post-card(
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
-        ).publication-card
-      q-btn(color="primary", @click="$router.push('publications')").read-more Ver mais publicações
+        ).post-card
+      q-btn(color="primary", @click="$router.push('posts')").read-more Ver mais publicações
 </template>
 
 <script>
-import PublicationCard from '../publications/PublicationCard'
+import PostCard from '../posts/PostCard'
 export default {
-  name: 'Publications',
+  name: 'Posts',
   components: {
-    PublicationCard
+    PostCard
   }
 }
 </script>

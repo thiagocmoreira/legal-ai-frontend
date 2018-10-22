@@ -3,7 +3,7 @@
     menu-index
     presentation-section
     about-us-section
-    publications-section
+    posts-section
     projects-section
     people-section
     contact-section
@@ -14,7 +14,7 @@
 import MenuIndex from '../components/menu/Menu'
 import PresentationSection from '../components/index/Presentation'
 import AboutUsSection from '../components/index/AboutUs'
-import PublicationsSection from '../components/index/Publications'
+import PostsSection from '../components/index/Posts'
 import ProjectsSection from '../components/index/Projects'
 import PeopleSection from '../components/index/People'
 import ContactSection from '../components/index/Contact'
@@ -28,7 +28,7 @@ export default {
     MenuIndex,
     PresentationSection,
     AboutUsSection,
-    PublicationsSection,
+    PostsSection,
     ProjectsSection,
     PeopleSection,
     ContactSection,

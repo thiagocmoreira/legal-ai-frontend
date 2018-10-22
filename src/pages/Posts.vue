@@ -12,7 +12,7 @@
             h2.page-title Publicações
     div.publications
       div.inner-publications
-        publication-card(
+        post-card(
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
         )
@@ -22,13 +22,13 @@
 <script>
 import MenuIndex from '../components/menu/Menu'
 import FooterPage from '../components/general/FooterPage'
-import PublicationCard from '../components/publications/PublicationCard'
+import PostCard from '../components/posts/PostCard'
 export default {
-  name: 'Publications',
+  name: 'Posts',
   components: {
     MenuIndex,
     FooterPage,
-    'publication-card': PublicationCard
+    'post-card': PostCard
   },
   metaInfo: {
     title: 'Publicações - Legal AI'

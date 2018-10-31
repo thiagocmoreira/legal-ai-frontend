@@ -83,7 +83,7 @@ div.post-container
       post-author(
         authorName="Gustavo Carvalho",
         authorPhoto="https://miro.medium.com/fit/c/240/240/1*v144gp-FjspBENZVD_zLfQ.jpeg",
-        authorRole="Pesquisador Legal Labs",
+        authorRole="Graduando em Engenharia Elétrica",
         date="21 de Maio de 2018",
         timeLecture="6"
       )
@@ -104,13 +104,12 @@ export default {
   },
   props: {
     postId: {
-      type: String,
-      required: true
+      type: String
     }
   },
   computed: {
     bg () {
-      return require('../assets/img/bg.jpg')
+      return require('../assets/img/preconceitos.jpeg')
     }
   }
 }

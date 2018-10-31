@@ -22,6 +22,13 @@ const routes = [
     ]
   },
   {
+    path: '/ricardo-fernandes',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Person.vue') }
+    ]
+  },
+  {
     path: '/projects',
     component: () => import('layouts/MyLayout.vue'),
     children: [

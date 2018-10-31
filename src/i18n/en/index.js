@@ -10,7 +10,7 @@ export default {
     contact: 'Contact'
   },
   home: {
-    title: 'Law and Artificial Intelligence in one place',
+    title: 'Law and Artificial Intelligence in one place', // Direito e Inteligência Artificial em um só lugar
     about: {
       title: 'About Legal AI',
       text1: 'Within international partnership with ',

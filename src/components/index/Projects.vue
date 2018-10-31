@@ -20,7 +20,7 @@ export default {
         {
           id: 1,
           name: 'Projeto VICTOR',
-          resume: 'O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.'
+          resume: 'Utiliza IA para aumentar a eficiência e a velocidade de avaliação judicial dos processos que chegam ao tribunal. Desenvolvido em parceria com a Universidade de Brasília – UnB'
         }
       ]
     }

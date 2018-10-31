@@ -4,7 +4,7 @@
 export default {
   menu: {
     about: 'Sobre',
-    publications: 'Publicações',
+    posts: 'Publicações',
     projects: 'Projetos',
     people: 'Pessoas',
     contact: 'Contato'
@@ -19,6 +19,18 @@ export default {
       text5: 'Consequentemente, o grupo discutirá e encontrará respostas para problemas jurídicos em regulamentações governamentais, políticas empresariais e procedimentos automatizados para verificação de conformidade, planejamento jurídico e análise regulatória.',
       text6: 'No projeto, podemos contar com um grupo que envolve pesquisadores Docentes e Alunos em nível de graduação, mestrado, doutorado e profissionais com reconhecida especialização em áreas multidisciplinares, integrando Direito, Engenharia de IA e Data Science.',
       text7: 'Assim, terá o potencial de trazer para a sociedade compreensão jurídica e ferramentas legais de maneira geral.'
+    },
+    posts: {
+      title: 'Publicações',
+      readMore: 'Mais Publicações'
+    },
+    projects: {
+      title: 'Projetos',
+      readMore: 'Mais Projetos'
+    },
+    people: {
+      title: 'Pessoas',
+      readMore: 'Mais Pessoas'
     }
   }
 }

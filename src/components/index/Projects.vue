@@ -1,10 +1,10 @@
 <template lang="pug">
   nav.projects-container#projects
     div.inner-content
-      h3.title Projetos
+      h3.title {{$t('home.projects.title')}}
       div.projects
         project-card(v-for="p in projects", :key="p.id", :project="p")
-      q-btn(color="primary", @click="$router.push('projects')").read-more Ver mais projetos
+      q-btn(color="primary", @click="$router.push('projects')").read-more {{$t('home.projects.readMore')}}
 </template>
 
 <script>

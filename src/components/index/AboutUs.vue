@@ -3,17 +3,19 @@
     q-scroll-observable(@scroll="userHasScrolled")
     div.inner-content
       div.text
-        h3.title Sobre o Legal AI
-        p O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
+        h3.title {{$t('home.about.title')}}
+        p
+          | {{$t('home.about.text1')}}
+          a(href="https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/", target="_blank").link The Stanford Center for Legal Informatics – CodeX – Stanford University
+          | {{$t('home.about.text2')}}
+          a(href="http://www.uva.nl/en", target="_blank").link PPLE College of University of Amsterdam – UvA
+          | {{$t('home.about.text3')}}
       div.list
         div.list-items
-          ul
-            li Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
-            li O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
-            li É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica.
-            li Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
-            li Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum.
-            li O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
+          div.inner-list {{$t('home.about.text4')}}
+          div.inner-list {{$t('home.about.text5')}}
+          div.inner-list {{$t('home.about.text6')}}
+          div.inner-list {{$t('home.about.text7')}}
         div.img-animation
           img(src="../../assets/img/hand.png").hand
           img(v-if="show[0]", src="../../assets/img/light.png").light.animate-scale
@@ -115,6 +117,13 @@ export default {
         width 235px
   p
     margin 0
+.link
+  color $grey-9
+  text-decoration none
+  &:visited
+    color $grey-9
+  &:hover
+    color $primary
 .list
   display flex
   @media (max-width: 1010px)
@@ -122,12 +131,7 @@ export default {
     align-items center
   .list-items
     flex 1
-    ul
-      margin 0
-      padding-left 30px
-      @media (max-width: 440px)
-        padding-left 20px
-    li
+    .inner-list
       margin-bottom 10px
   .img-animation
     width 285px

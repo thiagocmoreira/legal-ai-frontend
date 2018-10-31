@@ -5,7 +5,7 @@
         h1.logo.animate-pop
           q-icon(name="mdi-gavel")
           | LEGAL AI
-        p.slogan Direito e Inteligência Artificial em um só lugar
+        p.slogan {{$t('home.title')}}
       div.right
         q-carousel(
           infinite,

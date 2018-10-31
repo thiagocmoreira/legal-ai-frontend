@@ -1,14 +1,14 @@
 <template lang="pug">
   nav.people-container#people
     div.inner-content
-      h3.title Pessoas
+      h3.title {{$t('home.people.title')}}
       div.people
         person-card(
           v-for="p in people",
           :key="p.id",
           :person="p"
         ).person
-      q-btn(color="primary", @click="$router.push('people')").read-more Ver mais pessoas
+      q-btn(color="primary", @click="$router.push('people')").read-more {{$t('home.people.readMore')}}
 </template>
 
 <script>

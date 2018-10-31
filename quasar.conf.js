@@ -36,6 +36,13 @@ module.exports = function (ctx) {
           test: /\.pug$/,
           loader: 'pug-plain-loader'
         })
+        cfg.module.rules.push({
+          resourceQuery: /blockType=i18n/,
+          use: [
+            {loader: '@kazupon/vue-i18n-loader'},
+            {loader: 'yaml-loader'}
+          ]
+        })
       }
     },
     devServer: {

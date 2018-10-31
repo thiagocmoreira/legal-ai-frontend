@@ -1,13 +1,13 @@
 <template lang="pug">
   nav.publications-container#publications
     div.inner-content
-      h3.title Publicações
+      h3.title {{$t('home.posts.title')}}
       div.publications
         post-card(
           title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
           resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
         ).post-card
-      q-btn(color="primary", @click="$router.push('posts')").read-more Ver mais publicações
+      q-btn(color="primary", @click="$router.push('posts')").read-more {{$t('home.posts.readMore')}}
 </template>
 
 <script>

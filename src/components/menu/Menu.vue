@@ -25,11 +25,11 @@
             color="grey-7"
           ).btn-mobile
           nav
-            a(href="#", v-scroll-to="{ el: '#about-us', offset: -40}") Sobre
-            a(href="#", v-scroll-to="{ el: '#publications', offset: -75}") Publicações
-            a(href="#", v-scroll-to="{ el: '#projects', offset: -80}") Projetos
-            a(href="#", v-scroll-to="{ el: '#people', offset: -90}") Pessoas
-            a(href="#", v-scroll-to="'#contact'") Contato
+            a(href="#", v-scroll-to="{ el: '#about-us', offset: -40}") {{$t('menu.about')}}
+            a(href="#", v-scroll-to="{ el: '#publications', offset: -75}") {{$t('menu.posts')}}
+            a(href="#", v-scroll-to="{ el: '#projects', offset: -80}") {{$t('menu.projects')}}
+            a(href="#", v-scroll-to="{ el: '#people', offset: -90}") {{$t('menu.people')}}
+            a(href="#", v-scroll-to="'#contact'") {{$t('menu.contact')}}
 </template>
 
 <script>
@@ -45,6 +45,13 @@ export default {
     }
   },
   methods: {
+    changeLang () {
+      if (this.brLang) {
+        this.$i18n.locale = 'en'
+      } else {
+        this.$i18n.locale = 'ptBr'
+      }
+    },
     showMenuMobile () {
       this.menuMobileVisibility = !this.menuMobileVisibility
     }
@@ -52,6 +59,9 @@ export default {
   computed: {
     onIndex () {
       return this.$route.path === '/'
+    },
+    brLang () {
+      return this.$i18n.locale === 'ptBr'
     }
   }
 }

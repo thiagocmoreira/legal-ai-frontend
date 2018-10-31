@@ -39,7 +39,7 @@ export default {
     FooterPage
   },
   metaInfo: {
-    title: 'Publicações - Legal AI'
+    title: 'Ricardo Fernandes - Legal AI'
   },
   computed: {
     bg () {
@@ -203,6 +203,6 @@ export default {
       background $grey-4
   .text
     color $grey-8
-    white-space pre
+    white-space pre-wrap
     line-height 22px
 </style>

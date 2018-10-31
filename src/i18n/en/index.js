@@ -43,8 +43,12 @@ export default {
     }
   },
   // Posts
-  post: {
+  posts: {
     name: 'Publications'
+  },
+  // Post
+  post: {
+    name: 'Publication'
   },
   postCard: {
     viewArticle: 'Read Article'

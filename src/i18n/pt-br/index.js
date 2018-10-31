@@ -43,6 +43,10 @@ export default {
     }
   },
   // Posts
+  posts: {
+    name: 'Publicações'
+  },
+  // Post
   post: {
     name: 'Publicação'
   },

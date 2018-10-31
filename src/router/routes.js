@@ -36,6 +36,13 @@ const routes = [
     ]
   },
   {
+    path: '/projeto-victor',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Project.vue') }
+    ]
+  },
+  {
     path: '/post/:postId',
     component: () => import('layouts/MyLayout.vue'),
     props: true,

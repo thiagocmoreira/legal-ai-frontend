@@ -9,7 +9,7 @@
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Publicações
+            h2.page-title {{$t('posts.name')}}
     div.publications
       div.inner-publications
         post-card(

@@ -1,17 +1,22 @@
 <template lang="pug">
   div.publication-card-container
     div.publication-img
-      img(src="https://cdn-images-1.medium.com/max/800/1*y0va7PWFAnogoh-o87ly1Q.jpeg")
+      img(:src="image")
     div.publication-infos
       h3 {{title}}
       p {{resume}}
-      q-btn(color="primary", @click="$router.push('/post/1')").read-article {{$t('postCard.viewArticle')}}
+      q-btn(color="primary", @click="redirectToPost(path)").read-article {{$t('postCard.viewArticle')}}
+    q-btn(round, :class="lang === 'pt' ? 'pt-lang' : ''").lang {{lang}}
 </template>
 
 <script>
 export default {
-  name: 'PublicationCard',
+  name: 'PostCard',
   props: {
+    image: {
+      type: String,
+      default: '../../assets/img/placeholder.jpg'
+    },
     title: {
       type: String,
       default: 'Publicação'
@@ -19,6 +24,20 @@ export default {
     resume: {
       type: String,
       default: 'Resumo da publicação'
+    },
+    lang: {
+      type: String,
+      default: 'EN'
+    },
+    path: {
+      type: String,
+      default: 'post/1'
+    }
+  },
+  methods: {
+    redirectToPost (path) {
+      console.log(path)
+      this.$router.push(path)
     }
   }
 }
@@ -35,6 +54,7 @@ export default {
   margin 0 10px
   min-width 300px
   margin-bottom 20px
+  position relative
   @media (max-width: 1070px)
     min-width 270px
   @media (max-width: 975px)
@@ -45,10 +65,14 @@ export default {
     min-width 400px
   @media (max-width: 520px)
     min-width 360px
+  @media (max-width: 480px)
+    max-width 360px
   @media (max-width: 460px)
     min-width 330px
   @media (max-width: 440px)
     min-width 280px
+  @media (max-width: 420px)
+    max-width 300px
   @media (max-width: 380px)
     min-width 250px
   &:hover
@@ -65,10 +89,11 @@ export default {
     align-items center
     justify-content center
     overflow hidden
+    max-height 260px
     @media (max-width: 850px)
       min-width 200px
     img
-      width 110%
+      width 140%
       display block
       transition all 0.2s ease
       @media (max-width: 850px)
@@ -79,6 +104,7 @@ export default {
     width 100%
     background $green-8
     padding 30px
+    flex 1
     h3
       margin 0
       font-size 22px
@@ -103,4 +129,21 @@ export default {
     margin-top 10px
   @media (max-width: 730px)
     margin-top 30px
+.lang
+  position absolute
+  top 0
+  right 0
+  z-index 5
+  background red
+  margin 10px
+  padding 5px
+  width 33px
+  height 30px
+  color white
+  border-radius 0 !important
+  border-radius 5px
+  background $blue-8
+  pointer-events none
+  &.pt-lang
+    background $blue-4
 </style>

@@ -43,13 +43,27 @@ const routes = [
     ]
   },
   {
-    path: '/post/:postId',
+    path: '/preconceitos',
     component: () => import('layouts/MyLayout.vue'),
-    props: true,
     children: [
       { path: '', component: () => import('pages/Post.vue') }
     ]
+  },
+  {
+    path: '/classificacoes-victor',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Post1.vue') }
+    ]
   }
+  // {
+  //   path: '/post/:postId',
+  //   component: () => import('layouts/MyLayout.vue'),
+  //   props: true,
+  //   children: [
+  //     { path: '', component: () => import('pages/Post.vue') }
+  //   ]
+  // }
 ]
 
 // Always leave this as last one

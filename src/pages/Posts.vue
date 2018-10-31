@@ -13,8 +13,13 @@
     div.publications
       div.inner-publications
         post-card(
-          title="Os preconceitos ocultos na inteligência artificial, e como removê-los",
-          resume="Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas."
+          v-for="post in posts",
+          :key="post.id",
+          :image="post.image",
+          :title="post.title",
+          :resume="post.resume",
+          :lang="post.lang",
+          :path="post.path"
         )
     footer-page.foorer-page
 </template>
@@ -32,6 +37,36 @@ export default {
   },
   metaInfo: {
     title: 'Publicações - Legal AI'
+  },
+  data () {
+    return {
+      posts: [
+        {
+          id: 3,
+          image: '../../assets/img/stf.jpeg',
+          title: 'Projeto VICTOR: Resultados Parciais nas Classificações de Peças',
+          resume: 'O dado para classificar peças, foi o rotulado pelos especialistas de direito no projeto. Utilizando da primeira e segunda páginas, quando disponível, eles rotularam as peças dos processos em 6 categorias...',
+          lang: 'pt',
+          path: 'classificacoes-victor'
+        },
+        {
+          id: 2,
+          image: '../../assets/img/dra-luzia.jpg',
+          title: 'How we constructed Dra. Luzia, the first platform in Brazil with machine learning applied to  judicial decisions',
+          resume: 'The need for technology applied to the legal sector has been a very relevant issue in the Brazilian scenario. The volume of processes is huge and  the traditional methods of process...',
+          lang: 'en',
+          path: 'dra-luzia'
+        },
+        {
+          id: 1,
+          image: '../../assets/img/preconceitos.jpeg',
+          title: 'Os preconceitos ocultos na inteligência artificial, e como removê-los',
+          resume: 'Com avanços a passos largos, as técnicas de Inteligência Artificial (IA) vêm superando a performance humana em diversas tarefas que há poucos anos eram solucionadas apenas por especialistas...',
+          lang: 'pt',
+          path: 'preconceitos'
+        }
+      ]
+    }
   },
   computed: {
     bg () {

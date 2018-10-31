@@ -159,7 +159,6 @@ export default {
 .about
   flex 1
   background white
-  margin-left 25px
   display flex
   padding 30px 25px
   flex-direction column

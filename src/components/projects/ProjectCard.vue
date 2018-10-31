@@ -5,7 +5,7 @@
       div.content
         h3 {{project.name}}
         p {{project.resume}}
-        q-btn.more {{$t('projectCard.viewMore')}}
+        q-btn(@click="$router.push('projeto-victor')").more {{$t('projectCard.viewMore')}}
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template lang="pug">
   div.person-card-container
     div.img
-      img(:src="person.photo? person.photo : placeholderImage")
+      img(:src="person.photo ? person.photo : placeholderImage")
     div(:class="person.role === 'teacher' ? 'teacher-card' : ''").description
       h4 {{person.name}}
       p {{person.resume}}

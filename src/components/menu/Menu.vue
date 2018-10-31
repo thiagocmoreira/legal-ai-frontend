@@ -10,11 +10,12 @@
             v-model="search",
             type="search",
             inverted-light,
-            placeholder="Pesquisar...",
+            :placeholder="$t('menu.search')",
             :after="[{icon: 'mdi-magnify', color: 'blue'}]"
           ).search-input
-        div(v-if="onIndex").menu-items
+        div.menu-items
           q-btn(
+            v-if="onIndex",
             flat,
             dense,
             round,
@@ -24,7 +25,18 @@
             size="18px",
             color="grey-7"
           ).btn-mobile
-          nav
+          q-btn(
+            v-else,
+            flat,
+            dense,
+            round,
+            icon="home"
+            @click="$router.push('/')"
+            aria-label="Menu",
+            size="18px",
+            color="grey-7"
+          ).btn-mobile
+          nav(v-if="onIndex")
             a(href="#", v-scroll-to="{ el: '#about-us', offset: -40}") {{$t('menu.about')}}
             a(href="#", v-scroll-to="{ el: '#publications', offset: -75}") {{$t('menu.posts')}}
             a(href="#", v-scroll-to="{ el: '#projects', offset: -80}") {{$t('menu.projects')}}

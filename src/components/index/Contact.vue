@@ -5,7 +5,7 @@
         h1.logo
           q-icon(name="mdi-gavel")
           | LEGAL AI
-        p.slogan Direito e Inteligência Artificial em um só lugar
+        p.slogan {{$t('home.contact.slogan')}}
         div.social-media-btns
           q-btn(flat, round, icon="mdi-facebook", color="grey-7")
           q-btn(flat, round, icon="mdi-linkedin", color="grey-7")
@@ -13,11 +13,11 @@
           q-btn(flat, round, icon="mdi-youtube", color="grey-7")
       div.contact
         form(action="https://formspree.io/contato@legalabs.com.br", method="POST", target="_blank").fields
-          q-input(color="grey-7", placeholder="Nome", :value="name", name="Nome", required, inverted)
-          q-input(color="grey-7", placeholder="Ocupação/Cargo e Instituição", name="Ocupacao/Cargo-Instituição", :value="role", required, inverted)
+          q-input(color="grey-7", :placeholder="$t('home.contact.name')", :value="name", name="Nome", required, inverted)
+          q-input(color="grey-7", :placeholder="$t('home.contact.occupation')", name="Ocupacao/Cargo-Instituição", :value="role", required, inverted)
           q-input(color="grey-7", placeholder="Email", type="email", name="Email", :value="email", required, inverted)
-          q-input(color="grey-7", placeholder="Mensagem", type="textarea", name="Mensagem", :value="message", :max-height="200", required, inverted)
-          q-btn(color="green-8", type="submit") Enviar
+          q-input(color="grey-7", :placeholder="$t('home.contact.message')", type="textarea", name="Mensagem", :value="message", :max-height="170", required, inverted)
+          q-btn(color="green-8", type="submit") {{$t('home.contact.send')}}
 </template>
 
 <script>

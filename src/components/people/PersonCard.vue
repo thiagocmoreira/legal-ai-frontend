@@ -1,11 +1,11 @@
 <template lang="pug">
   div.person-card-container
     div.img
-      img(:src="person.photo")
+      img(:src="person.photo? person.photo : placeholderImage")
     div(:class="person.role === 'teacher' ? 'teacher-card' : ''").description
       h4 {{person.name}}
       p {{person.resume}}
-      q-btn(@click="redirectToPost(person.route)").view-profile Ver Perfil
+      q-btn(@click="redirectToPost(person.route)").view-profile {{$t('personCard.viewProfile')}}
 </template>
 
 <script>
@@ -15,6 +15,11 @@ export default {
     person: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    placeholderImage () {
+      return require('../../assets/img/placeholder.jpg')
     }
   },
   methods: {

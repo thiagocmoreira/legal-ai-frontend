@@ -9,7 +9,7 @@
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Projetos
+            h2.page-title {{$t('projects.name')}}
       div.inner-projects
         project-card(v-for="p in projects", :key="p.id", :project="p")
     footer-page.foorer-page

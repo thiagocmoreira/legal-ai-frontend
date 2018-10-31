@@ -5,7 +5,7 @@
     div.publication-infos
       h3 {{title}}
       p {{resume}}
-      q-btn(color="primary", @click="$router.push('/post/1')").read-article Ler artigo
+      q-btn(color="primary", @click="$router.push('/post/1')").read-article {{$t('postCard.viewArticle')}}
 </template>
 
 <script>

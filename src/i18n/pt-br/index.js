@@ -7,9 +7,11 @@ export default {
     posts: 'Publicações',
     projects: 'Projetos',
     people: 'Pessoas',
-    contact: 'Contato'
+    contact: 'Contato',
+    search: 'Pesquisar...'
   },
   home: {
+    title: 'Direito e Inteligência Artificial em um só lugar',
     about: {
       title: 'Sobre o Legal AI',
       text1: 'Em parceria internacional com ',
@@ -31,6 +33,34 @@ export default {
     people: {
       title: 'Pessoas',
       readMore: 'Mais Pessoas'
+    },
+    contact: {
+      title: 'Direito e Inteligência Artificial em um só lugar',
+      name: 'Nome',
+      message: 'Mensagem',
+      occupation: 'Ocupação/Cargo e Instituição',
+      send: 'Enviar'
     }
+  },
+  // Posts
+  post: {
+    name: 'Publicação'
+  },
+  postCard: {
+    viewArticle: 'Ler Artigo'
+  },
+  // Projects
+  projects: {
+    name: 'Projetos'
+  },
+  projectCard: {
+    viewMore: 'Saiba Mais'
+  },
+  // People
+  people: {
+    name: 'Pessoas'
+  },
+  personCard: {
+    viewProfile: 'Ver Perfil'
   }
 }

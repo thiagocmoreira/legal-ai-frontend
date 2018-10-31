@@ -14,13 +14,18 @@
       div.inner-person
         div.resume
           div.person-image
-            img(src="https://aicamp.com.br/img/Foto_Ricardo_Fernandes.dcf8813.jpg")
+            img(src="../assets/img/ricardo.jpg")
           div.name Ricardo Fernandes
           div.mini-resume Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs
           div.email profricardofernandes@gmai.com
         div.biography
           div.title Biografia
-          p.text Biografia não disponível
+          p.text
+            | - Pós-PH.D. em Informática Jurídica no Codex-The Stanford Centre for Legal Informatics, Universidade de Stanford;
+            | - Professor Adjunto da Faculdade de Direito da Universidade de Brasília (UnB), em mestrado e doutorado;
+            | - Diretor Executivo do Legal-AI / UnB - Grupo de Pesquisa em Inteligência Artificial Legal da Universidade de Brasília (UnB);
+            | - Pesquisador Sênior de Inteligência Artificial no Laboratório Legal;
+            | - Fundador da Legal Labs e do AI Camp.
     footer-page.foorer-page
 </template>
 
@@ -198,4 +203,6 @@ export default {
       background $grey-4
   .text
     color $grey-8
+    white-space pre
+    line-height 22px
 </style>

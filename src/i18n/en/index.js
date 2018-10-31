@@ -4,13 +4,14 @@
 export default {
   menu: {
     about: 'About',
-    posts: 'Posts',
+    posts: 'Publications',
     projects: 'Projects',
     people: 'People',
-    contact: 'Contact'
+    contact: 'Contact',
+    search: 'Search...'
   },
   home: {
-    title: 'Law and Artificial Intelligence in one place', // Direito e Inteligência Artificial em um só lugar
+    title: 'Law and Artificial Intelligence in one place',
     about: {
       title: 'About Legal AI',
       text1: 'Within international partnership with ',
@@ -22,16 +23,44 @@ export default {
       text7: 'Therefore, it will have the potential to bring legal understanding and legal tools in a general way to society.'
     },
     posts: {
-      title: 'Posts',
-      readMore: 'More Posts'
+      title: 'Publications',
+      readMore: 'View more Posts'
     },
     projects: {
       title: 'Projects',
-      readMore: 'More Projects'
+      readMore: 'View more Projects'
     },
     people: {
       title: 'People',
-      readMore: 'More People'
+      readMore: 'View more People'
+    },
+    contact: {
+      slogan: 'Law and Artificial Intelligence in one place',
+      name: 'Name',
+      message: 'Message',
+      occupation: 'Role and Institution',
+      send: 'Send'
     }
+  },
+  // Posts
+  post: {
+    name: 'Publications'
+  },
+  postCard: {
+    viewArticle: 'Read Article'
+  },
+  // Projects
+  projects: {
+    name: 'Projects'
+  },
+  projectCard: {
+    viewMore: 'View More'
+  },
+  // People
+  people: {
+    name: 'People'
+  },
+  personCard: {
+    viewProfile: 'View Profile'
   }
 }

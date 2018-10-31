@@ -13,11 +13,11 @@
           :easing="overshoot"
         ).carousel-container
           q-carousel-slide
-            img(src="https://images.unsplash.com/photo-1494707924465-e1426acb48cb?ixlib=rb-0.3.5&s=06a3576d1ba3e5a1246005e8cc79798b&auto=format&fit=crop&w=1350&q=80")
+            img(:src="presentation3")
           q-carousel-slide
-            img(src="https://images.unsplash.com/photo-1511829667472-8942b2c0b0b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=82fdc68b29eaf72f5ca5a63af3b6a5e0&auto=format&fit=crop&w=1350&q=80")
+            img(:src="presentation1")
           q-carousel-slide
-            img(src="https://images.unsplash.com/photo-1494869042583-f6c911f04b4c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=afb9d9fb328ac6002abacd04e32e19a0&auto=format&fit=crop&w=1350&q=80")
+            img(:src="presentation2")
 </template>
 
 <script>
@@ -27,6 +27,17 @@ export default {
   data () {
     return {
       overshoot: easing.overshoot
+    }
+  },
+  computed: {
+    presentation1 () {
+      return require('../../assets/img/presentation-1.jpeg')
+    },
+    presentation2 () {
+      return require('../../assets/img/presentation-2.jpeg')
+    },
+    presentation3 () {
+      return require('../../assets/img/presentation-3.jpeg')
     }
   }
 }

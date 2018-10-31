@@ -9,7 +9,7 @@ div.post-container
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Publicação
+            h2.page-title {{$t('post.name')}}
   div.post-inside
     h1 Os preconceitos ocultos na inteligência artificial, e como removê-los
     article

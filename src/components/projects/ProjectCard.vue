@@ -1,11 +1,11 @@
 <template lang="pug">
   div.project-card-container
-    img(src="https://images.unsplash.com/photo-1528217580778-96e570819666?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19a3a4640d3a734c3da937653a66c809&auto=format&fit=crop&w=500&q=60")
+    img(:src="statue")
     div.inner-project
       div.content
         h3 {{project.name}}
         p {{project.resume}}
-        q-btn.more Saiba mais
+        q-btn.more {{$t('projectCard.viewMore')}}
 </template>
 
 <script>
@@ -15,6 +15,11 @@ export default {
     project: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    statue () {
+      return ('../../assets/img/statue.jpeg')
     }
   }
 }
@@ -51,7 +56,7 @@ export default {
     transform scale(1.03)
     .more
       background $green-8
-      color white
+      color $green-9
   img
     width 100%
     @media (max-width: 370px)

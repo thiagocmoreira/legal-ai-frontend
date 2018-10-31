@@ -9,7 +9,7 @@
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Pessoas
+            h2.page-title {{$t('people.name')}}
     div.people
       div.inner-people
         person-card(v-for="p of people", :key="id", :person="p").person-card
@@ -37,29 +37,27 @@ export default {
           id: 1,
           role: 'teacher',
           name: 'Professor Ricardo Fernandes',
-          photo: 'https://aicamp.com.br/img/Foto_Ricardo_Fernandes.dcf8813.jpg',
+          photo: '../assets/img/ricardo.jpg',
           resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs'
         },
         {
           id: 2,
           role: 'studant',
-          name: 'Thiago Moreira',
-          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
+          name: 'Danilo Barros',
+          photo: '../assets/img/danilos.jpeg',
           resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
         },
         {
           id: 3,
           role: 'studant',
-          name: 'Danilo Barros',
-          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+          name: 'Gustavo Carvalho',
+          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
         },
         {
           id: 4,
           role: 'studant',
-          name: 'Gustavo Carvalho',
-          photo: 'https://loadandgosa.com/wp-content/uploads/2018/05/placeholder-profile.jpg',
-          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+          name: 'Thiago Moreira',
+          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
         }
       ]
     }

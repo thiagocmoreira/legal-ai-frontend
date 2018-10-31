@@ -5,7 +5,7 @@
     div(:class="person.role === 'teacher' ? 'teacher-card' : ''").description
       h4 {{person.name}}
       p {{person.resume}}
-      q-btn.view-profile Ver Perfil
+      q-btn(@click="redirectToPost(person.route)").view-profile Ver Perfil
 </template>
 
 <script>
@@ -15,6 +15,11 @@ export default {
     person: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    redirectToPost (route) {
+      this.$router.push(route)
     }
   }
 }

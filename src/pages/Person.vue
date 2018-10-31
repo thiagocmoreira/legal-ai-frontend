@@ -9,13 +9,13 @@
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Professor Ricardo Fernandes
+            h2.page-title Ricardo Fernandes
     div.person
       div.inner-person
         div.resume
           div.person-image
             img(src="https://aicamp.com.br/img/Foto_Ricardo_Fernandes.dcf8813.jpg")
-          div.name Professor Ricardo Fernandes
+          div.name Ricardo Fernandes
           div.mini-resume Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs
           div.email profricardofernandes@gmai.com
         div.biography
@@ -27,13 +27,11 @@
 <script>
 import MenuIndex from '../components/menu/Menu'
 import FooterPage from '../components/general/FooterPage'
-import PostCard from '../components/posts/PostCard'
 export default {
   name: 'Posts',
   components: {
     MenuIndex,
-    FooterPage,
-    'post-card': PostCard
+    FooterPage
   },
   metaInfo: {
     title: 'Publicações - Legal AI'
@@ -156,10 +154,7 @@ export default {
     margin 0 auto 20px auto
     img
       transition all 0.2s ease
-      height 105%
-      @media (max-width: 1125px)
-        width 100%
-        height auto
+      width 100%
       @media (max-width: 720px)
         width 110%
         transform scale(1.1)

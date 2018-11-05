@@ -88,9 +88,7 @@ export default {
     align-items center
     justify-content center
     overflow hidden
-    max-height 260px
-    @media (max-width: 850px)
-      min-width 200px
+    max-height 180px
     img
       width 140%
       display block

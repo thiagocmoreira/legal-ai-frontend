@@ -55,6 +55,13 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Post1.vue') }
     ]
+  },
+  {
+    path: '/dra-luzia',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Post2.vue') }
+    ]
   }
   // {
   //   path: '/post/:postId',

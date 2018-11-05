@@ -57,6 +57,12 @@ export default {
   projects: {
     name: 'Projetos'
   },
+  project: {
+    about: 'Sobre o Projeto',
+    ai: 'Inteligência Artificial',
+    law: 'Direito',
+    font: 'Fonte: '
+  },
   projectCard: {
     viewMore: 'Saiba Mais'
   },

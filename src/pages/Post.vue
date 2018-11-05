@@ -83,7 +83,7 @@ div.post-container
       post-author(
         authorName="Gustavo Carvalho",
         authorPhoto="https://miro.medium.com/fit/c/240/240/1*v144gp-FjspBENZVD_zLfQ.jpeg",
-        authorRole="Graduando em Engenharia Elétrica",
+        authorRole="Graduando em Engenharia Elétrica pela UnB",
         date="21 de Maio de 2018",
         timeLecture="6"
       )

@@ -14,10 +14,10 @@
       div.inner-project
         div.about
           div.title
-            span Sobre o Projeto
+            span {{$t('project.about')}}
             div.labels
-              div.label Inteligência Artificial
-              div.label Direito
+              div.label {{$t('project.ai')}}
+              div.label {{$t('project.law')}}
           div.separator
           p.text
             | O Projeto VICTOR utiliza Inteligência Artificial (IA) para aumentar a eficiência e a velocidade de avaliação judicial dos processos que chegam ao Supremo Tribunal Federal (STF). Desenvolvido em parceria com a Universidade de Brasília – UnB, o projeto é o mais relevante no âmbito acadêmico brasileiro relacionado à aplicação de IA no Direito.
@@ -26,7 +26,9 @@
             | Além disso, possibilitará melhor aproveitamento de recursos materiais e humanos do Tribunal, acelerando a análise dos processos e reduzindo o congestionamento na admissibilidade dos recursos nos tribunais de origem, auxiliando o Poder Judiciário a cumprir sua missão em diversas instâncias.
             | Para classificar e analisar os cerca de 42 mil processos que chegaram ao STF no primeiro semestre, seriam necessárias quase 22 mil horas de trabalho de servidores e estagiários. O tempo que os servidores dedicavam a essas tarefas de classificação, organização e digitalização dos processos será transferido para etapas mais complexas do processamento judicial.
             | O nome do projeto, VICTOR, é uma homenagem a Victor Nunes Leal (falecido), ministro do STF de 1960 a 1969, autor da obra Coronelismo, Enxada e Voto e principal responsável pela sistematização da jurisprudência do STF em súmula, o que facilitou a aplicação dos precedentes judiciais aos recursos.
-          p.font Fonte: STF
+          p.font
+            span {{$t('project.font')}}
+            | STF
     footer-page.foorer-page
 </template>
 

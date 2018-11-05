@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     statue () {
-      return ('../../assets/img/statue.jpeg')
+      return require('../../assets/img/statue.jpeg')
     }
   }
 }

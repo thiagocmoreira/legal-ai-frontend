@@ -12,7 +12,7 @@
             h2.page-title {{$t('people.name')}}
     div.people
       div.inner-people
-        person-card(v-for="p of people", :key="id", :person="p").person-card
+        person-card(v-for="p of people", :key="p.id", :person="p").person-card
     footer-page.foorer-page
 </template>
 
@@ -37,27 +37,46 @@ export default {
           id: 1,
           role: 'teacher',
           name: 'Professor Ricardo Fernandes',
-          photo: '../assets/img/ricardo.jpg',
-          resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs'
+          photo: require('../assets/img/ricardo.jpg'),
+          resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs',
+          route: 'ricardo-fernandes'
         },
         {
           id: 2,
           role: 'studant',
           name: 'Danilo Barros',
-          photo: '../assets/img/danilos.jpeg',
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+          photo: require('../assets/img/danilos.jpeg'),
+          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          route: 'danilo-barros'
         },
         {
           id: 3,
           role: 'studant',
           name: 'Gustavo Carvalho',
-          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          route: 'gustavo-carvalho'
+        },
+        {
+          id: 5,
+          role: 'teacher',
+          name: 'Professor Nilton Silva',
+          photo: require('../assets/img/nilton.jpeg'),
+          resume: 'Graduado em computação (UEG). Mestre em Ciência da Computação (UnB). Doutor em Processamento de Dados e Análise Ambiental (UnB). Professor / Pesquisador da Faculdade de Engenharia (UnB)',
+          route: 'nilton-silva'
+        },
+        {
+          id: 6,
+          role: 'studant',
+          name: 'André Guedes',
+          resume: 'Graduado em Engenharia de Software pela Universidade de Brasília. Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          route: 'andre-guedes'
         },
         {
           id: 4,
           role: 'studant',
           name: 'Thiago Moreira',
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)'
+          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          route: 'thiago-moreira'
         }
       ]
     }

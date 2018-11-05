@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     redirectToPost (path) {
-      console.log(path)
       this.$router.push(path)
     }
   }

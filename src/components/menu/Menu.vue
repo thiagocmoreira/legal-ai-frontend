@@ -42,6 +42,8 @@
             a(href="#", v-scroll-to="{ el: '#projects', offset: -80}") {{$t('menu.projects')}}
             a(href="#", v-scroll-to="{ el: '#people', offset: -90}") {{$t('menu.people')}}
             a(href="#", v-scroll-to="'#contact'") {{$t('menu.contact')}}
+          div.lang-btns
+            q-btn(@click="changeLang", :color="brLang ? 'primary' : 'blue-6'", size="8px") {{btnName}}
 </template>
 
 <script>
@@ -74,6 +76,9 @@ export default {
     },
     brLang () {
       return this.$i18n.locale === 'ptBr'
+    },
+    btnName () {
+      return this.brLang ? 'EN' : 'PT'
     }
   }
 }
@@ -174,4 +179,21 @@ export default {
   display flex
   flex-direction row
   align-items center
+.lang-btns
+  display flex
+  flex-direction column
+  margin-left 16px
+  position relative
+  align-items center
+  justify-content center
+  width 20px
+  height 18px
+  @media (max-width: 900px)
+    display none
+  .q-btn
+    padding 0 5px
+    position absolute
+    top 0
+    left 0
+    margin-top -1px
 </style>

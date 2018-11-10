@@ -55,7 +55,14 @@ export default {
   },
   // Projects
   projects: {
-    name: 'Projetos'
+    name: 'Projetos',
+    list: [
+      {
+        id: 1,
+        name: 'Projeto VICTOR',
+        resume: 'Utiliza IA para aumentar a eficiência e a velocidade de avaliação judicial dos processos que chegam ao tribunal. Desenvolvido em parceria com a Universidade de Brasília – UnB'
+      }
+    ]
   },
   project: {
     about: 'Sobre o Projeto',

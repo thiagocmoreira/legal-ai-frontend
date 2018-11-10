@@ -36,47 +36,79 @@ export default {
         {
           id: 1,
           role: 'teacher',
-          name: 'Professor Ricardo Fernandes',
+          name: 'Ricardo Fernandes (Executive Director)',
           photo: require('../assets/img/ricardo.jpg'),
           resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs',
           route: 'ricardo-fernandes'
         },
         {
+          id: 6,
+          role: 'teacher',
+          name: 'Roland Vogl',
+          photo: require('../assets/img/roland.png'),
+          resume: 'Executive Director of CodeX – The Stanford Center for legal informatics. Executive Director of the Stanford Program in Law, Science and technology.',
+          route: 'roland-vogl'
+        },
+        {
           id: 2,
           role: 'studant',
-          name: 'Danilo Barros',
+          name: 'Danilo Barros (Researcher)',
           photo: require('../assets/img/danilos.jpeg'),
           resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
           route: 'danilo-barros'
         },
         {
-          id: 3,
-          role: 'studant',
-          name: 'Gustavo Carvalho',
-          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
-          route: 'gustavo-carvalho'
-        },
-        {
           id: 5,
           role: 'teacher',
-          name: 'Professor Nilton Silva',
           photo: require('../assets/img/nilton.jpeg'),
-          resume: 'Graduado em computação (UEG). Mestre em Ciência da Computação (UnB). Doutor em Processamento de Dados e Análise Ambiental (UnB). Professor / Pesquisador da Faculdade de Engenharia (UnB)',
+          name: 'Nilton Silva (AI Director)',
+          resume: 'Graduated in computing (UEG). Master of Computer Science (UnB). PhD in Data Processing and Environmental Analysis (UnB). professor/researcher at Faculty of Engineering (UnB)',
           route: 'nilton-silva'
         },
         {
-          id: 6,
+          id: 8,
           role: 'studant',
-          name: 'André Guedes',
+          photo: '../assets/img/sardinha.png',
+          name: 'Guilherme Sardinha (Academic Secretary and Researcher)',
+          resume: 'Researcher in Constitutional and Digital Law with a degree in Law (UniCEUB). Undergraduate Thesis work in the area of ​​digital law indicated for 3 awards',
+          route: 'sardinha'
+        },
+        {
+          id: 9,
+          role: 'studant',
+          photo: '../assets/img/hugo.jpeg',
+          name: 'Hugo Honda (Researcher)',
+          resume: 'Developer and Researcher with degree in Computer Science from the UnB. He was lead developer and research assistant at UnBs Laboratory of Neuroscience and Behavior. 1st place in the Unity Security Hackathon.',
+          route: 'hugo-honda'
+        },
+        {
+          id: 3,
+          role: 'studant',
+          name: 'Gustavo Carvalho (Researcher)',
+          resume: 'Developer and Researcher with graduation in Eletric Engeneering at University of Brasilia. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
+          route: 'gustavo-carvalho'
+        },
+        {
+          id: 7,
+          role: 'studant',
+          name: 'André Guedes (Researcher)',
           resume: 'Graduado em Engenharia de Software pela Universidade de Brasília. Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
           route: 'andre-guedes'
         },
         {
           id: 4,
           role: 'studant',
-          name: 'Thiago Moreira',
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          photo: '../assets/img/thiago.png',
+          name: 'Thiago Moreira (Digital Support and Researcher)',
+          resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
           route: 'thiago-moreira'
+        },
+        {
+          id: 10,
+          role: 'studant',
+          name: 'Vitor Bertulucci (Researcher)',
+          resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
+          route: 'vitor-bertulucci'
         }
       ]
     }

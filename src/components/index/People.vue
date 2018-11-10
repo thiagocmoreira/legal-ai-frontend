@@ -24,39 +24,33 @@ export default {
         {
           id: 1,
           role: 'teacher',
-          name: 'Professor Ricardo Fernandes',
+          name: 'Ricardo Fernandes (Executive Director)',
           photo: require('../../assets/img/ricardo.jpg'),
-          resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs',
+          resume: 'Post-Ph.D in Legal Informatics at the Codex (Stanford). Founder of the IBIA. Adjunct Professor of Law School (UnB). Legal Labs founder',
           route: 'ricardo-fernandes'
+        },
+        {
+          id: 6,
+          role: 'teacher',
+          name: 'Roland Vogl',
+          photo: require('../../assets/img/roland.png'),
+          resume: 'Executive Director of CodeX – The Stanford Center for legal informatics. Executive Director of the Stanford Program in Law, Science and technology.',
+          route: 'roland-vogl'
         },
         {
           id: 2,
           role: 'studant',
-          name: 'Danilo Barros',
+          name: 'Danilo Barros (Researcher)',
           photo: require('../../assets/img/danilos.jpeg'),
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          resume: 'Developer and Researcher with training in Software Engineering at the UnB. Researcher student at applied AI Project VICTOR a partnership of Supreme Federal Court and UnB.',
           route: 'danilo-barros'
         },
         {
-          id: 3,
-          role: 'studant',
-          name: 'Gustavo Carvalho',
-          resume: 'Aluno de Engenharia Elétrica na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
-          route: 'gustavo-carvalho'
-        },
-        // {
-        //   id: 4,
-        //   role: 'studant',
-        //   name: 'Thiago Moreira',
-        //   resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
-        //   route: 'thiago-moreira'
-        // },
-        {
           id: 5,
           role: 'teacher',
-          name: 'Professor Nilton Silva',
+          name: 'Nilton Silva (AI Director)',
           photo: require('../../assets/img/nilton.jpeg'),
-          resume: 'Graduado em computação (UEG). Mestre em Ciência da Computação (UnB). Doutor em Processamento de Dados e Análise Ambiental (UnB). Professor / Pesquisador da Faculdade de Engenharia (UnB)',
+          resume: 'Graduated in computing (UEG). Master of Computer Science (UnB). PhD in Data Processing and Environmental Analysis (UnB). professor/researcher at Faculty of Engineering (UnB)',
           route: 'nilton-silva'
         }
       ]

@@ -55,7 +55,14 @@ export default {
   },
   // Projects
   projects: {
-    name: 'Projects'
+    name: 'Projects',
+    list: [
+      {
+        id: 1,
+        name: 'VICTOR Project',
+        resume: 'It uses Artificial Intelligence to increase the efficiency and the speed of judicial evaluation of the cases that arrive at the court. Developed in partnership with the UnB'
+      }
+    ]
   },
   project: {
     about: 'About the Project',

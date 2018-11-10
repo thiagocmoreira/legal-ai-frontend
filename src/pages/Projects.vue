@@ -11,7 +11,7 @@
               | LEGAL AI
             h2.page-title {{$t('projects.name')}}
       div.inner-projects
-        project-card(v-for="p in projects", :key="p.id", :project="p")
+        project-card(v-for="p in $t('projects.list')", :key="p.id", :project="p")
     footer-page.foorer-page
 </template>
 
@@ -28,17 +28,6 @@ export default {
   },
   metaInfo: {
     title: 'Projetos - Legal AI'
-  },
-  data () {
-    return {
-      projects: [
-        {
-          id: 1,
-          name: 'Projeto VICTOR',
-          resume: 'O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro.'
-        }
-      ]
-    }
   },
   computed: {
     bg () {

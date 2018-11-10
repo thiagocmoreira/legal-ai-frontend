@@ -3,7 +3,7 @@
     div.inner-content
       h3.title {{$t('home.projects.title')}}
       div.projects
-        project-card(v-for="p in projects", :key="p.id", :project="p")
+        project-card(v-for="p in $t('projects.list')", :key="p.id", :project="p")
       q-btn(color="primary", @click="$router.push('projects')").read-more {{$t('home.projects.readMore')}}
 </template>
 
@@ -13,17 +13,6 @@ export default {
   name: 'Projects',
   components: {
     ProjectCard
-  },
-  data () {
-    return {
-      projects: [
-        {
-          id: 1,
-          name: 'Projeto VICTOR',
-          resume: 'Utiliza IA para aumentar a eficiência e a velocidade de avaliação judicial dos processos que chegam ao tribunal. Desenvolvido em parceria com a Universidade de Brasília – UnB'
-        }
-      ]
-    }
   }
 }
 </script>

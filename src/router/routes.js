@@ -28,7 +28,13 @@ const routes = [
       { path: 'ricardo-fernandes', component: () => import('pages/person/Ricardo.vue') },
       { path: 'roland-vogl', component: () => import('pages/person/Roland.vue') },
       { path: 'danilo-barros', component: () => import('pages/person/Danilo.vue') },
-      { path: 'nilton-silva', component: () => import('pages/person/Nilton.vue') }
+      { path: 'nilton-silva', component: () => import('pages/person/Nilton.vue') },
+      { path: 'guilherme-sardinha', component: () => import('pages/person/Sardinha.vue') },
+      { path: 'hugo-honda', component: () => import('pages/person/Hugo.vue') },
+      { path: 'andre-guedes', component: () => import('pages/person/Andre.vue') },
+      { path: 'gustavo-carvalho', component: () => import('pages/person/Gustavo.vue') },
+      { path: 'thiago-moreira', component: () => import('pages/person/Thiago.vue') },
+      { path: 'vitor-bertulucci', component: () => import('pages/person/Vitor.vue') }
     ]
   },
   {

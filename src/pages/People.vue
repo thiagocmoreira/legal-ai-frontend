@@ -71,7 +71,7 @@ export default {
           photo: require('../assets/img/sardinha.png'),
           name: 'Guilherme Sardinha (Academic Secretary and Researcher)',
           resume: 'Researcher in Constitutional and Digital Law with a degree in Law (UniCEUB). Undergraduate Thesis work in the area of ​​digital law indicated for 3 awards',
-          route: 'sardinha'
+          route: 'guilherme-sardinha'
         },
         {
           id: 9,
@@ -92,7 +92,7 @@ export default {
           id: 7,
           role: 'studant',
           name: 'André Guedes (Researcher)',
-          resume: 'Graduado em Engenharia de Software pela Universidade de Brasília. Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher at applied AI Project VICTOR a partnership of STF and UnB. AI Engineer at Legal Labs',
           route: 'andre-guedes'
         },
         {

@@ -68,7 +68,7 @@ export default {
         {
           id: 8,
           role: 'studant',
-          photo: '../assets/img/sardinha.png',
+          photo: require('../assets/img/sardinha.png'),
           name: 'Guilherme Sardinha (Academic Secretary and Researcher)',
           resume: 'Researcher in Constitutional and Digital Law with a degree in Law (UniCEUB). Undergraduate Thesis work in the area of ​​digital law indicated for 3 awards',
           route: 'sardinha'
@@ -76,7 +76,7 @@ export default {
         {
           id: 9,
           role: 'studant',
-          photo: '../assets/img/hugo.jpeg',
+          photo: require('../assets/img/hugo.jpeg'),
           name: 'Hugo Honda (Researcher)',
           resume: 'Developer and Researcher with degree in Computer Science from the UnB. He was lead developer and research assistant at UnBs Laboratory of Neuroscience and Behavior. 1st place in the Unity Security Hackathon.',
           route: 'hugo-honda'
@@ -98,7 +98,7 @@ export default {
         {
           id: 4,
           role: 'studant',
-          photo: '../assets/img/thiago.png',
+          photo: require('../assets/img/thiago.png'),
           name: 'Thiago Moreira (Digital Support and Researcher)',
           resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
           route: 'thiago-moreira'

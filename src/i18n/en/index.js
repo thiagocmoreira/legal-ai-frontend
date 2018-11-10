@@ -79,5 +79,9 @@ export default {
   },
   personCard: {
     viewProfile: 'View Profile'
+  },
+  person: {
+    biography: 'Biography',
+    mail: 'Mail: Uninformed'
   }
 }

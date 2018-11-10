@@ -9,29 +9,28 @@
             h1.logo
               q-icon(name="mdi-gavel")
               | LEGAL AI
-            h2.page-title Ricardo Fernandes
+            h2.page-title Roland Vogl
     div.person
       div.inner-person
         div.resume
           div.person-image
-            img(src="../assets/img/ricardo.jpg")
-          div.name Ricardo Fernandes
-          div.mini-resume Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs
-          div.email profricardofernandes@gmai.com
+            img(src="../../assets/img/roland.png")
+          div.name Roland Vogl
+          div.mini-resume Executive Director of CodeX – The Stanford Center for legal informatics. Executive Director of the Stanford Program in Law, Science and technology.
+          div.email {{$t('person.mail')}}
         div.biography
-          div.title Biografia
+          div.title {{$t('person.biography')}}
           p.text
-            | - Pós-PH.D. em Informática Jurídica no Codex-The Stanford Centre for Legal Informatics, Universidade de Stanford;
-            | - Professor Adjunto da Faculdade de Direito da Universidade de Brasília (UnB), em mestrado e doutorado;
-            | - Diretor Executivo do Legal-AI / UnB - Grupo de Pesquisa em Inteligência Artificial Legal da Universidade de Brasília (UnB);
-            | - Pesquisador Sênior de Inteligência Artificial no Laboratório Legal;
-            | - Fundador da Legal Labs e do AI Camp.
+            | - Executive Director of CodeX – The Stanford Center for legal informatics;
+            | - Executive Director of the Stanford Program in Law, Science and technology;
+            | - Visiting Professor at University of Vienna.
+            | - Vogl holds both a Dr.iur. (JSD) and a Mag.iur. (JD) from Leopold-Franzens University of Innsbruck, Austria as well as a JSM from Stanford Law School
     footer-page.foorer-page
 </template>
 
 <script>
-import MenuIndex from '../components/menu/Menu'
-import FooterPage from '../components/general/FooterPage'
+import MenuIndex from '../../components/menu/Menu'
+import FooterPage from '../../components/general/FooterPage'
 export default {
   name: 'Posts',
   components: {
@@ -39,11 +38,11 @@ export default {
     FooterPage
   },
   metaInfo: {
-    title: 'Ricardo Fernandes - Legal AI'
+    title: 'Roland Vogl - Legal AI'
   },
   computed: {
     bg () {
-      return require('../assets/img/bg.jpg')
+      return require('../../assets/img/bg.jpg')
     }
   }
 }
@@ -160,9 +159,9 @@ export default {
     img
       transition all 0.2s ease
       width 100%
+      transform scale(1.8)
       @media (max-width: 720px)
         width 110%
-        transform scale(1.1)
       @media (max-width: 650px)
         width 100%
         transform scale(1.1)
@@ -204,5 +203,5 @@ export default {
   .text
     color $grey-8
     white-space pre-wrap
-    line-height 22px
+    line-height 26px
 </style>

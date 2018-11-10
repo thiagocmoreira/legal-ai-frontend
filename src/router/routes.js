@@ -22,10 +22,13 @@ const routes = [
     ]
   },
   {
-    path: '/ricardo-fernandes',
+    path: '/person',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Person.vue') }
+      { path: 'ricardo-fernandes', component: () => import('pages/person/Ricardo.vue') },
+      { path: 'roland-vogl', component: () => import('pages/person/Roland.vue') },
+      { path: 'danilo-barros', component: () => import('pages/person/Danilo.vue') },
+      { path: 'nilton-silva', component: () => import('pages/person/Nilton.vue') }
     ]
   },
   {

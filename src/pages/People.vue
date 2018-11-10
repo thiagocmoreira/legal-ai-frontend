@@ -38,7 +38,7 @@ export default {
           role: 'teacher',
           name: 'Ricardo Fernandes (Executive Director)',
           photo: require('../assets/img/ricardo.jpg'),
-          resume: 'Pós-PH.D. em Informática Jurídica no CODEX (Stanford). Fundador do Instituto IA. Professor Doutor da Faculdade de Direito da UnB. Fundador da Legal Labs',
+          resume: 'Post-Ph.D in Legal Informatics at the Codex (Stanford). Founder of the IBIA. Adjunct Professor of Law School (UnB). Legal Labs founder',
           route: 'ricardo-fernandes'
         },
         {
@@ -54,7 +54,7 @@ export default {
           role: 'studant',
           name: 'Danilo Barros (Researcher)',
           photo: require('../assets/img/danilos.jpeg'),
-          resume: 'Aluno de Engenharia de Software na Universidade de Brasília. Aluno Pesquisador no Projeto VICTOR de Inteligência Artificial (STF e UnB)',
+          resume: 'Developer and Researcher with training in Software Engineering at the UnB. Researcher student at applied AI Project VICTOR a partnership of Supreme Federal Court and UnB.',
           route: 'danilo-barros'
         },
         {

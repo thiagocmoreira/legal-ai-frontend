@@ -98,7 +98,7 @@ export default {
         {
           id: 4,
           role: 'studant',
-          photo: require('../assets/img/thiago.png'),
+          photo: require('../assets/img/thiago.jpg'),
           name: 'Thiago Moreira (Digital Support and Researcher)',
           resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
           route: 'thiago-moreira'
@@ -106,6 +106,7 @@ export default {
         {
           id: 10,
           role: 'studant',
+          photo: require('../assets/img/tito.jpeg'),
           name: 'Vitor Bertulucci (Researcher)',
           resume: 'Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.',
           route: 'vitor-bertulucci'

@@ -44,9 +44,9 @@ export default {
         {
           id: 3,
           image: require('../assets/img/stf.jpeg'),
-          title: 'Projeto VICTOR: Resultados Parciais nas Classificações de Peças',
-          resume: 'O dado para classificar peças, foi o rotulado pelos especialistas de direito no projeto. Utilizando da primeira e segunda páginas, quando disponível, eles rotularam as peças dos processos em 6 categorias...',
-          lang: 'pt',
+          title: 'Document type classification for Brazil’s supreme court using a Convolutional Neural Network',
+          resume: 'The Brazilian Court System is currently the biggest judiciary system in the world, and receives an extremely high number of lawsuit cases every day. These cases need to be analyzed...',
+          lang: 'en',
           path: 'classificacoes-victor'
         },
         {

@@ -14,7 +14,7 @@
       div.inner-person
         div.resume
           div.person-image
-            img(src="../../assets/img/thiago.png")
+            img(src="../../assets/img/thiago.jpg")
           div.name Thiago Moreira
           div.mini-resume Developer and Researcher with graduation in Sofware Engeneering at UnB. Researcher student at applied AI Project VICTOR a partnership of STF and UnB.
           div.email {{$t('person.mail')}}
